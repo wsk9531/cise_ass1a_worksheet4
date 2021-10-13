@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, NavLink, BrowserRouter as Router } from "react-router-dom";
+
+import Home from "./components/Home";
 
 const App = () => {
   return (
@@ -8,7 +10,11 @@ const App = () => {
         <h1>Software Engineering Practice Evidence Repository (SEPER)</h1>
         <ul className="header">
           <li>
-            <a href="/">Home</a>
+            <li>
+              <NavLink exact to="/">
+                Home
+              </NavLink>
+            </li>
           </li>
           <li>
             <a href="/SEPractice">Select the Practice</a>
@@ -17,7 +23,9 @@ const App = () => {
             <a href="/SubmitArticle">Submit an Article</a>
           </li>
         </ul>
-        <div className="content"></div>
+        <div className="content">
+          <Route exact path="/" component={Home} />
+        </div>
       </div>
     </Router>
   );
