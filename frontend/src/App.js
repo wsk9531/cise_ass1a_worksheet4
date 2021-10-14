@@ -3,7 +3,7 @@ import { Route, NavLink, BrowserRouter as Router } from "react-router-dom";
 
 import Home from "./components/Home";
 import SubmitArticle from "./components/Submit-Article";
-
+import SEPractice from "./components/SEPractice";
 const App = () => {
   return (
     <Router>
@@ -11,27 +11,21 @@ const App = () => {
         <h1>Software Engineering Practice Evidence Repository (SEPER)</h1>
         <ul className="header">
           <li>
-            <li>
-              <NavLink exact to="/">
-                Home
-              </NavLink>
-            </li>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <li>
-              <li>
-                <NavLink to="/SubmitArticle">Submit an Article</NavLink>
-              </li>
-            </li>
+            <NavLink to="/SubmitArticle">Submit an Article</NavLink>
           </li>
           <li>
-            <a href="/SubmitArticle">Submit an Article</a>
+            <NavLink to="/SEPractice">Select the Practice</NavLink>
           </li>
         </ul>
         <div className="content">
           <Route exact path="/" component={Home} />
-
           <Route path="/SubmitArticle" component={SubmitArticle} />
+          <Route path="/SEPractice" component={SEPractice} />
         </div>
       </div>
     </Router>
