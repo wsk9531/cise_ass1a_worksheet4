@@ -2,6 +2,7 @@ import React from "react";
 import { Route, NavLink, BrowserRouter as Router } from "react-router-dom";
 
 import Home from "./components/Home";
+import SubmitArticle from "./components/Submit-Article";
 
 const App = () => {
   return (
@@ -17,7 +18,11 @@ const App = () => {
             </li>
           </li>
           <li>
-            <a href="/SEPractice">Select the Practice</a>
+            <li>
+              <li>
+                <NavLink to="/SubmitArticle">Submit an Article</NavLink>
+              </li>
+            </li>
           </li>
           <li>
             <a href="/SubmitArticle">Submit an Article</a>
@@ -25,6 +30,8 @@ const App = () => {
         </ul>
         <div className="content">
           <Route exact path="/" component={Home} />
+
+          <Route path="/SubmitArticle" component={SubmitArticle} />
         </div>
       </div>
     </Router>
