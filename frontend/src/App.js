@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import SubmitArticle from "./components/Submit-Article";
 import SEPractice from "./components/SEPractice";
 import NotFoundPage from "./components/404page";
+import "./index.css";
 const App = () => {
   return (
     <Router>
